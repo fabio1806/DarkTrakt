@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Dark Trakt
 // @namespace    http://tampermonkey.net/
-// @version      0.6.3
+// @version      0.6.4
 // @description  Dark theme for Trakt website
 // @author       Fabio1806
 // @match        https://trakt.tv/*
@@ -13,7 +13,7 @@
     'use strict';
 
     // ---------- User Data ----------------- //
-    let username = 'thor1806';
+    let username = '';
     let userLen = username.length;
     // -------------------------------------- //
 
@@ -188,6 +188,7 @@
 
                 // Remove ads
                 removeAll('#c7f7a-content-page');
+                removeAll('#e20df-f8539-wrapper');
 
                 changeBgColor('#progress-wrapper', '#1d1d1d');
                 changeBgColor('.comment-wrapper.list.subnav.wider.hidden-xs', '#262626');
@@ -198,25 +199,30 @@
                 changeColor('body', '#fff');
             }
 
-            else if (document.URL.slice(23,24+userLen+'/lists'.length) == username+'/lists'){
+            else if (document.URL.slice(23,23+userLen) == username){
 
-                 removeAll('#c7f7a-content-page');
+                removeAll('#c7f7a-content-page');
+                removeAll('#e20df-content-page');
 
-                 // Create an array to select the last section to change bg
-                 let sections = document.querySelectorAll('section');
-                 sections[sections.length-1].style.background = '#1d1d1d';
+                // Create an array to select the last section to change bg
+                let sections = document.querySelectorAll('section');
+                sections[sections.length-1].style.background = '#1d1d1d';
 
-                 changeArrBgColor('.subnav-wrapper', '#1d1d1d');
-                 changeArrBgColor('.comment-wrapper.list', '#262626');
-                 changeArrBgColor('h4', '#262626');
+                changeArrBgColor('.subnav-wrapper', '#1d1d1d');
+                changeArrBgColor('.subnav-text', '#484848');
+                changeArrBgColor('.comment-wrapper.list', '#262626');
 
-                 // Text colors
-                 changeArrColor('a.username.emojis-supported.emojis-converted', '#fff');
-                 changeColor('body', '#fff');
+                // Text colors
+                changeArrColor('a.username.emojis-supported.emojis-converted', '#fff');
+                changeArrColor('.subnav-wrapper .left h2 .right a', '#fff');
+                changeArrColor('.icon.btn-list-progress', '#fff');
+                changeArrColor('.icon.btn-list-subscribe', '#fff');
+                changeColor('#btn-list-edit-lists', '#fff');
+                changeColor('body', '#fff');
             }
 
             else {
-                removeAll('#c7f7a-content-page');
+                removeAll('#e20df-content-page');
             }
         }
         catch(err){
