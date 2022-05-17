@@ -155,7 +155,9 @@
             removeAll('#e20df-c7599-aa3b9-wrapper');
 
             changeBgColor('#info-wrapper', '#1d1d1d');
-            changeBgColor('.subnav-wrapper', '#484848');
+            
+            if(document.URL.contains('seasons')){
+                changeBgColor('.subnav-wrapper', '#484848'); }
 
             buttonList();
             changeArrColor('.btn-list-subscribe', '#ffffff');
