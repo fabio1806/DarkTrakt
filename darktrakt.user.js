@@ -48,8 +48,7 @@
 
     else {
         try{
-            removeAll('#c7f7a-d7f72-wrapper');
-            removeAll('#c7f7a-d7f72-a9686');
+            removeAll('#e1a979-d54078-wrapper');
             removeAll('#e20df-f8539-wrapper');
             removeAll('#e20df-c7599-aa3b9-wrapper');
             removeAll('.grid-item.e20df-grid-item.col-xlg-3.col-md-4.col-sm-6')
@@ -75,7 +74,7 @@
         // Change BG for all the sections
         try {
             removeAll('#c7f7a-d7f72-wrapper');
-            removeAll('#e20df-f8539-wrapper');
+            removeAll('#e1a979-d54078-wrapper');
             removeAll('#e20df-c7599-aa3b9-wrapper');
             removeAll('.vip')
 
@@ -108,8 +107,7 @@
 
         try{
             if(!document.URL.includes('/trending')){
-                removeAll('#c7f7a-d7f72-wrapper');
-                removeAll('#c7f7a-d7f72-a9686');
+                removeAll('#e1a979-d54078-wrapper');
                 removeAll('#e20df-f8539-wrapper');
                 removeAll('#e20df-c7599-aa3b9-wrapper');
 
@@ -130,8 +128,7 @@
             }
 
             else{
-                removeAll('#c7f7a-d7f72-wrapper');
-                removeAll('#c7f7a-d7f72-a9686');
+                removeAll('#e1a979-d54078-wrapper');
                 removeAll('#e20df-f8539-wrapper');
                 removeAll('.c7f7a-grid-item');
                 removeAll('#e20df-c7599-aa3b9-wrapper');
@@ -151,7 +148,7 @@
 
     function changeShowColor() {
         try{
-            removeAll('#e20df-f8539-wrapper');
+            removeAll('#e1a979-d54078-wrapper');
             removeAll('#e20df-c7599-aa3b9-wrapper');
 
             changeBgColor('#info-wrapper', '#1d1d1d');
@@ -190,7 +187,7 @@
 
                 // Remove ads
                 removeAll('#c7f7a-content-page');
-                removeAll('#e20df-f8539-wrapper');
+                removeAll('#e1a979-d54078-wrapper');
 
                 changeBgColor('#progress-wrapper', '#1d1d1d');
                 changeBgColor('.comment-wrapper.list.subnav.wider.hidden-xs', '#262626');
