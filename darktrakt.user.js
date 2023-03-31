@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Dark Trakt
 // @namespace    http://tampermonkey.net/
-// @version      0.6.4
+// @version      0.6.6
 // @description  Dark theme for Trakt website
 // @author       Fabio1806
 // @match        https://trakt.tv/*
